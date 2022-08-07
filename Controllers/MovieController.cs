@@ -69,6 +69,21 @@ namespace MovieAPI.Controllers
             return allMoviesOfCategory.ElementAt(index);
         }
         // Get a list of random movie picks (input quantity)
+        // THIS WORKS BUT FIX DUPLICATES !!!
+        [Route("RandomMovieList")]
+        public Movie[] RandomMovieList(int quantity)
+        {
+            // var randomMovieList = new List<Movie>();
+            Random rnd = new Random();
+            var randomMovieList = new List<Movie>();
+            for (int i = 0; i<quantity; i++)
+            {
+                var index = rnd.Next(DB.Movies.Count);
+                randomMovieList.Add(DB.Movies[index]);
+            }
+
+            return randomMovieList.ToArray();
+        }
         // Get a list of all movie categories
         [Route("AllCategories")]
         public Category[] AllCategories()
