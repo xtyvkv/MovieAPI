@@ -70,6 +70,8 @@ namespace MovieAPI.Controllers
         }
         // Get a list of random movie picks (input quantity)
         // THIS WORKS BUT FIX DUPLICATES !!!
+        // possible fix - first randomize movie list, then pick
+        // creates new issue: what happens if qty exceeds number of movies?
         [Route("RandomMovieList")]
         public Movie[] RandomMovieList(int quantity)
         {
