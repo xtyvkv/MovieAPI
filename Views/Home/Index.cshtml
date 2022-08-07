@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <ul>
+        <li><a href="api/Movie/SeeMovieList">See all movies</a></li>
+        <li><a href="api/Movie/MoviesByCategory?chosenCategory=Action">See all Action movies</a></li>
+        <li><a href="api/Movie/RandomMovie">Get a random movie</a></li>
+        <li><a href="api/Movie/RandomMovieByCategory?chosenCategory=Comedy">Get a random Comedy movie</a></li>
+        <li><a href="api/Movie/AllCategories">See all movie categories</a></li>
+        <li><a href="api/Movie/InfoByTitle?titleInput=Superbad">See all info for 'Superbad'</a></li>
+        <li><a href="api/Movie/ListByKeyword?keyword=John">See all movies with 'John' in the title</a></li>
+    </ul>
+</div>
